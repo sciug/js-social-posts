@@ -1,0 +1,27 @@
+
+
+
+body{
+    background-color: whitesmoke;
+}
+
+.post{background-color: white;}
+
+
+.author_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.author_img img{
+    object-fit: cover;
+    border-radius: 50px;
+
+}
+.post_image{
+    width: 100%;
+}
+.post_image img{
+    width: 100%;
+}
