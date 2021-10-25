@@ -5,7 +5,14 @@ body{
     background-color: whitesmoke;
 }
 
-.post{background-color: white;}
+.post{background-color: white;
+box-shadow: 0px 0px 10px rgb(209, 209, 209);
+border-radius: 25px;
+padding: 2rem 1.2rem;
+}
+
+
+
 
 
 .author_img{
@@ -20,6 +27,35 @@ body{
     border-radius: 50px;
 
 }
+
+
+
+.author_date{
+    margin-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.info{
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.author_date h4{
+margin: 0;
+font-weight: 700;
+color: rgb(71, 71, 71);}
+
+.author_date p{
+   margin: 0;
+   color: grey;
+   
+}
+
+
+
+
 .post_image{
     width: 100%;
     height: 300px;
@@ -28,8 +64,38 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
 }
 
-.red{
-    background-color: red;
+
+.post_text{
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+
+    
+}
+
+
+
+
+.likes{
+margin-top: 1.5rem;}
+
+.likeBtn{
+    background-color: white;
+    box-shadow:0px 0px 10px rgb(209, 209, 209);
+    border: none;
+    padding: .5rem 1.3rem;
+    border-radius: 25px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+.thumb{
+    margin-right: .3rem;
+}
+.green{
+    color: white;
+    background-color: cadetblue;
+
+    
 }
