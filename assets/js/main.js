@@ -48,10 +48,7 @@ for(let i = 0; i <posts.length; i++){
     postElement.classList.add("post", "mb-5", "p-3")
     postElement.setAttribute("id", `${post.id}`)
 
-    function addLike(){
-        post.likes += 1
-    }
-
+ 
 
 
     postElement.innerHTML = `<div class="info d-flex">
@@ -69,11 +66,10 @@ for(let i = 0; i <posts.length; i++){
         <img src="${post.postImage}"  alt="">
     </div>
     <div class="likes d-flex align-items-center justify-content-between">
-        <button class="likeBtn" onclick="addLike()">👍 mi piace</button>
-        <p class="m-0">piace a ${post.likes} persone</p>
+        <button class="likeBtn">👍 mi piace</button>
+        <p class="m-0 likesNumber"></p>
     </div>
 `
-
 
 
 
@@ -83,3 +79,18 @@ postContainer.append(postElement)
 }
 
 
+const likeBtns = document.getElementsByClassName("likeBtn")
+const likeNumbers = document.getElementsByClassName("likesNumber")
+
+for(let i=0; i<likeBtns.length; i++){
+    let likeBtn = likeBtns[i]
+    let likeNumber = likeNumbers[i]
+    likeNumber.innerHTML= "piace a " + posts[i].likes + " persone"
+    likeBtn.addEventListener("click", function(){
+        posts[i].likes +=1
+        likeNumber.innerHTML="piace a " + posts[i].likes + " persone"
+        console.log(posts[i].likes)
+
+
+    })
+}
