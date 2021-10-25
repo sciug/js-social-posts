@@ -5,14 +5,11 @@ const postContainer = document.getElementById("posts_container")
 
 
 const posts = [
-
-
-
     {author: "Rose Mary",
     authorAvatar: "https://unsplash.it/300/300?image=",
     postImage: "https://unsplash.it/400/300?image=",
     likes: Math.floor(Math.random()*10),
-    postDate: new Date(),
+    postDate: "10 months ago",
     id: "firstPost",
     postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque inventore modi illo eaque cum, nam rem? Dolorem, sunt optio? Magni consequatur provident ea asse velit!"
     },
@@ -53,7 +50,7 @@ for(let i = 0; i <posts.length; i++){
 
     postElement.innerHTML = `<div class="info d-flex">
             <div class="author_img">
-            <img src="${post.authorAvatar}" class="img-fluid" alt="profile_pic onerror="myFunction()">
+            <img src="${post.authorAvatar}" class="img-fluid" alt="profile_pic">
         </div>
 
         <div class="author_date">
@@ -68,17 +65,11 @@ for(let i = 0; i <posts.length; i++){
         <img src="${post.postImage}"  alt="">
     </div>
     <div class="likes d-flex align-items-center justify-content-between">
-        <button class="likeBtn d-flex align-items-center"><span class="thumb">👍</span> <span>mi piace</span></button>
+        <button class="likeBtn d-flex align-items-center"><span class="thumb"><i class="fas fa-thumbs-up"></i></span><span>mi piace</span></button>
         <p class="m-0 likesNumber"></p>
     </div>
 `
 
-function myFunction(){
-   const profilePics= document.getElementsByClassName("author_img")
-   let profilePic = profilePics[i]
-   profilePic.innerHTML= post.author.charAt(0)
-
-}
 
 postContainer.append(postElement)
     
