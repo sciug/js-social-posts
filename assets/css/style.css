@@ -12,6 +12,7 @@ body{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-color: rgb(173, 44, 44);
 }
 
 .author_img img{
@@ -21,7 +22,14 @@ body{
 }
 .post_image{
     width: 100%;
+    height: 300px;
 }
 .post_image img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.red{
+    background-color: red;
 }
